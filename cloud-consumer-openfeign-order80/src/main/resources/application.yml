@@ -20,3 +20,5 @@ feign:
       default:
         connect-timeout: 1000
         read-timeout: 2000
+  sentinel:
+    enabled: true
