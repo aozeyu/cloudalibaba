@@ -1,0 +1,23 @@
+server:
+  port: 8001
+
+
+spring:
+  application:
+    name: payment-provider-dubbo
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+
+
+dubbo:
+  scan:
+    base-packages: com.itbaizhan.service
+  registry:
+    address: nacos://localhost:8848
+    timeout: 10000
+  protocal:
+    name: dubbo
+    port: -1
