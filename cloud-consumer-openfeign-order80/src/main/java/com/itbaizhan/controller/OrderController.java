@@ -7,13 +7,15 @@ import com.itbaizhan.service.*;
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.*;
+
 /**
  * @author yaozeyu
  */
 @RestController
 @RequestMapping("order")
 public class OrderController {
-  @Autowired
+ @Autowired
   private IPaymentFeginsService iPaymentFeginsService;
 
  @GetMapping("index")

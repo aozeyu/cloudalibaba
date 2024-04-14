@@ -13,3 +13,10 @@ spring:
       discovery:
         server-addr: localhost:8848
 
+
+feign:
+  client:
+    config:
+      default:
+        connect-timeout: 1000
+        read-timeout: 2000
