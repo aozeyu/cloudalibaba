@@ -13,6 +13,7 @@
         <module>cloud-consumer-order80</module>
         <module>cloud-consumer-openfeign-order80</module>
         <module>cloud-service-api</module>
+        <module>cloud-dubbo-provider-payment8001</module>
     </modules>
 
     <properties>
