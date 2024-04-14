@@ -12,6 +12,7 @@
         <module>cloud-provider-payment8001</module>
         <module>cloud-consumer-order80</module>
         <module>cloud-consumer-openfeign-order80</module>
+        <module>cloud-service-api</module>
     </modules>
 
     <properties>
