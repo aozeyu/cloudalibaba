@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("payment")
 public class PaymentControler {
 
-  @GetMapping
+  @GetMapping("/index")
   public String index() {
     return "payment success";
   }
