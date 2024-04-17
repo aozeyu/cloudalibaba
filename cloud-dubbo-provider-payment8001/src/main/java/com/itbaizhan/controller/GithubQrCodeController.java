@@ -9,6 +9,7 @@ import javax.imageio.*;
 import javax.servlet.http.*;
 
 import java.awt.image.*;
+import java.io.*;
 
 /**
  * @author yaozeyu
@@ -27,8 +28,10 @@ public class GithubQrCodeController {
   @PostMapping("/generateWithQrCode")
   public String generateWithQrCode(@RequestParam("url") String url, HttpServletResponse response, HttpServletRequest request) {
     try {
-      BufferedImage bufferedImage = QrCodeGenWrapper.of(url).asBufferedImage();
+      InputStream inputStream = request.getPart("logo").getInputStream();
+      BufferedImage bufferedImage = QrCodeGenWrapper.of(url).setLogo(inputStream).setLogoRate(7).setLogoStyle(QrCodeOptions.LogoStyle.ROUND).asBufferedImage();
       ImageIO.write(bufferedImage,"png",response.getOutputStream());
+      inputStream.close();
     }catch (Exception e) {
       e.printStackTrace();
     }
